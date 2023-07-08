@@ -3,6 +3,7 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import TechStack from "./components/TechStack";
+import Contact from "./components/Contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,6 +16,7 @@ function App() {
       <Home darkmode={darkMode} />
       <About darkmode={darkMode} />
       <TechStack darkmode={darkMode} />
+      <Contact darkmode={darkMode} />
     </div>
   );
 }
