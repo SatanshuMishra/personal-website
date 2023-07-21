@@ -35,17 +35,17 @@ export default function Contact({ darkMode }: ContactProps) {
     <div
       className={`${
         darkmode ? "dark" : `light bg-white`
-      } flex flex-wrap justify-evenly items-center px-8 pt-40 pb-20 md:w-full lg:pb-60`}
+      } flex flex-col md:flex-row items-center justify-evenly lg:pl-[4rem] lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-60 overflow-hidden`}
     >
-      <div className="flex flex-col px-4 py-4 max-w-xl z-20">
-        <h1 className="text-5xl mt-1 mb-4">
-          <b>Get in touch 📡</b>
+      <div className="flex flex-col justify-center lg:px-5 py-4 lg:max-w-3xl z-20">
+        <h1 className="text-6xl font-black">
+          Get in Touch <span className="hidden md:inline-block">📡</span>
         </h1>
         <p className="text-lg my-1">
-          Have any questions or want to reach out? Send me an email or find me
-          around the web.
+          Have any questions or want to reach out? Want to collaberate on a
+          project? Shoot me a message 🙂. Or find me around the web.
         </p>
-        <div className="flex flex-row py-2">
+        <div className="flex flex-row py-2 text-4xl">
           <a href="https://www.linkedin.com/in/satanshumishra/" target="_blank">
             {/* <LinkedInLogoIcon className="h-10 w-10 pr-2" /> */}
             <FontAwesomeIcon icon={faLinkedinIn} className="h-7 w-7 pr-2" />

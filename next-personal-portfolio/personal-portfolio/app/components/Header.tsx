@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 // import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import portrait from "../assets/portrait_cropped.png";
@@ -32,21 +33,24 @@ export default function Header({ darkMode }: HeaderProps) {
       id="home"
       className={`${
         darkmode ? "dark" : `light`
-      } flex flex-col pl-[4rem] items-start overflow-hidden justify-center pt-40 pb-20 md:w-full lg:pb-60`}
+      } flex flex-col items-center justify-center lg:pl-[4rem] lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-60 overflow-hidden`}
     >
       {/* h-screen */}
       <div className="max-w-5xl p-4 z-20">
         {/* -translate-y-20 */}
-        <h1 className="font-black text-6xl px-4 py-4">
+        <h1 className="font-black text-5xl lg:text-6xl px-4 py-4">
           Full Stack Software <br /> Developer 👋
         </h1>
         <div className="px-4 flex flex-row justify-start items-center">
-          <FontAwesomeIcon icon={faQuoteLeft} className="text-6xl" />
-          <h3 className="font-semibold text-3xl px-4 pt-4 pb-2">
+          <FontAwesomeIcon
+            icon={faQuoteLeft}
+            className="text-5xl lg:text-6xl"
+          />
+          <h3 className="font-semibold text-2xl lg:text-3xl px-4 pt-4 pb-2">
             The future is what we make it. So make it a good one.
           </h3>
         </div>
-        <p className="font-light text-2xl leading-1 p-4">
+        <p className="font-light text-xl lg:text-2xl leading-1 p-4">
           Programming is not a hobby, it&apos;s a dream. I create clean, and
           accessible solutions for complex modern-day challenges.
         </p>
@@ -56,7 +60,7 @@ export default function Header({ darkMode }: HeaderProps) {
           target="_blank"
         >
           <button
-            className={`text-lg px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
+            className={`text-base lg:text-lg px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
               darkmode
                 ? "border-white bg-transparent hover:border-white hover:bg-white hover:text-black"
                 : "border-darkModeBackground bg-newDark text-white hover:border-darkModeBackground hover:bg-white hover:text-black"
@@ -71,7 +75,7 @@ export default function Header({ darkMode }: HeaderProps) {
               icon={faLinkedinIn}
               className={`${
                 isHoverLinkedIn && `fa-bounce`
-              } h-${iconSize} w-${iconSize} py-2 pr-2`}
+              } h-${iconSize} w-${iconSize} py-2 pr-2 text-3xl`}
               onMouseEnter={handleHoverLinkedIn}
               onMouseLeave={handleHoverLinkedIn}
             />
@@ -81,7 +85,7 @@ export default function Header({ darkMode }: HeaderProps) {
               icon={faGithubAlt}
               className={`${
                 isHoverGitHub && `fa-bounce`
-              } h-${iconSize} w-${iconSize} py-2 px-2`}
+              } h-${iconSize} w-${iconSize} py-2 px-2 text-3xl`}
               onMouseEnter={handleHoverGitHub}
               onMouseLeave={handleHoverGitHub}
             />

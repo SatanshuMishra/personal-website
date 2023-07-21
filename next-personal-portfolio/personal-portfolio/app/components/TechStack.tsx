@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+"use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TechContainer from "./TechContainer";
 import {
   frontEndTechnologies,
@@ -13,21 +13,27 @@ import {
   otherTechnologies,
   databaseTechnologies,
 } from "./Technologies";
+import { motion } from "framer-motion";
 
 type TechStackProps = {
   darkMode: boolean;
 };
 
 export default function TechStack({ darkMode }: TechStackProps) {
-  const darkmode = darkMode;
+  const [carouselWidth, setCarouselWidth] = useState(0);
+  const carousel = useRef(null);
+
+  useEffect(() => {
+    console.log(carousel.current);
+  }, []);
 
   return (
     <div
       className={`${
-        darkmode ? "dark" : `light`
-      } flex flex-col pl-[5rem] items-start overflow-hidden justify-center pt-40 pb-20 md:w-full lg:pb-60`}
+        darkMode ? "dark" : `light`
+      } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-60 overflow-hidden`}
     >
-      <div className="max-w-5xl z-20">
+      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem]">
         <h1 className="font-black text-6xl px-4 py-4">
           DESIGN.
           <br />
@@ -41,33 +47,48 @@ export default function TechStack({ darkMode }: TechStackProps) {
           recently.
         </p>
       </div>
-      <div className="tech-stack w-full flex flex-nowrap py-8 z-20 overflow-x-scroll overflow-visible">
+      <motion.div
+        drag="x"
+        ref={carousel}
+        dragConstraints={{ right: 0, left: -1643.29 }}
+        className="tech-stack w-full flex flex-nowrap px-[5rem] gap-8 py-8 z-20 overflow-x-visible"
+      >
         <TechContainer
+          darkMode={darkMode}
           technologyCategory="FRONT-END DEVELOPMENT"
           technologyData={frontEndTechnologies}
         />
         <TechContainer
+          darkMode={darkMode}
           technologyCategory="BACK-END DEVELOPMENT"
           technologyData={backEndTechnologies}
         />
         <TechContainer
+          darkMode={darkMode}
           technologyCategory="DATABASE MANAGEMENT"
           technologyData={databaseTechnologies}
         />
         <TechContainer
+          darkMode={darkMode}
+          technologyCategory="OTHER TECHNOLOGIES"
+          technologyData={otherTechnologies}
+        />
+        <TechContainer
+          darkMode={darkMode}
           technologyCategory="VERSION CONTROL"
           technologyData={versionControlTechnologies}
         />
         <TechContainer
+          darkMode={darkMode}
           technologyCategory="DESIGN"
           technologyData={designTechnologies}
         />
         <TechContainer
-          technologyCategory="OTHER TECHNOLOGIES"
-          technologyData={otherTechnologies}
+          darkMode={darkMode}
+          technologyCategory="IDE"
+          technologyData={IDE}
         />
-        <TechContainer technologyCategory="IDE" technologyData={IDE} />
-      </div>
+      </motion.div>
     </div>
   );
 }

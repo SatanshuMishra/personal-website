@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { motion } from "framer-motion";
 
 // import { slideInRight, slideOutRight } from "react-animations";
 // import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
@@ -19,11 +18,13 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
   const [scroll, setScroll] = useState(false);
   const [width, setWidth] = useState(true);
   const [showNav, setShowNav] = useState(false);
+  const [showNavBg, setShowNavBg] = useState(false);
 
   useEffect(() => {
     setWidth(window.scrollY > 500);
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 800);
+      // setShowNavBg(window.scrollY > 100);
     });
   }, []);
 
@@ -64,8 +65,10 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
     <div>
       <div
         className={`${
-          darkmode ? "dark" : `light`
-        } w-screen bg-transparent fixed top-0 z-40`}
+          darkmode
+            ? `dark ${showNavBg ? `bg-newDark` : ``}`
+            : `light ${showNavBg ? `bg-white` : ``}`
+        } w-screen bg-opacity-90 fixed top-0 z-40`}
       >
         <div className="flex flex-row justify-between items-center px-4 py-2 text-lg">
           <h1 className="font-bold text-lg">
