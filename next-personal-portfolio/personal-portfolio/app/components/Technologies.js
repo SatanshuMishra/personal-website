@@ -27,7 +27,7 @@ import Obsidian from "../assets/Obsidian.svg";
 import Nginx from "../assets/Nginx.svg";
 import Apache from "../assets/Apache.svg";
 import Vercel from "../assets/Vercel.svg";
-import GitHubPages from "../assets/GithubPages.svg";
+import GitHubPages from "../assets/GitHubPages.svg";
 import NPM from "../assets/NPM.svg";
 import Markdown from "../assets/Markdown.svg";
 import Docker from "../assets/Docker.svg";

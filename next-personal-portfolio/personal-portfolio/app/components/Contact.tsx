@@ -10,7 +10,7 @@ type ContactProps = {
 };
 
 export default function Contact({ darkMode }: ContactProps) {
-  const darkmode = darkMode;
+  const iconSize = 7;
 
   // FORMIK LOGIC
   const formik = useFormik({
@@ -34,97 +34,102 @@ export default function Contact({ darkMode }: ContactProps) {
   return (
     <div
       className={`${
-        darkmode ? "dark" : `light bg-white`
-      } flex flex-col md:flex-row items-center justify-evenly lg:pl-[4rem] lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-60 overflow-hidden`}
+        darkMode ? `dark` : `light`
+      } flex flex-col lg:flex-row p-4 lg:px-8`}
     >
-      <div className="flex flex-col justify-center lg:px-5 py-4 lg:max-w-3xl z-20">
-        <h1 className="text-6xl font-black">
-          Get in Touch <span className="hidden md:inline-block">📡</span>
+      <div
+        className={`flex flex-col items-start justify-center p-4 lg:px-12 z-20`}
+      >
+        <h1 className={`font-black text-6xl py-4`}>
+          Get in Touch
+          <span className={`text-7xl hidden md:inline-block`}>📡</span>
         </h1>
-        <p className="text-lg my-1">
-          Have any questions or want to reach out? Want to collaberate on a
-          project? Shoot me a message 🙂. Or find me around the web.
+        <p className={`font-light text-xl lg:text-2xl leading-8 `}>
+          Have any questions? Want to collaberate on a project? Or just want to
+          talk? Shoot me a message 🙂
         </p>
-        <div className="flex flex-row py-2 text-4xl">
-          <a href="https://www.linkedin.com/in/satanshumishra/" target="_blank">
-            {/* <LinkedInLogoIcon className="h-10 w-10 pr-2" /> */}
-            <FontAwesomeIcon icon={faLinkedinIn} className="h-7 w-7 pr-2" />
-          </a>
-          <a href="https://github.com/SatanshuMishra" target="_blank">
-            {/* <GitHubLogoIcon className="h-10 w-10 pr-2" /> */}
-            <FontAwesomeIcon icon={faGithubAlt} className="h-7 w-7 pr-2" />
-          </a>
-        </div>
       </div>
-      <div className="flex flex-col px-4 py-4 max-w-xl z-20">
-        <form onSubmit={formik.handleSubmit}>
-          <label
-            className={`font-medium ${
-              formik.touched.name && formik.errors.name && `text-red-600`
-            }`}
-            htmlFor="name"
-          >
-            {formik.touched.name && formik.errors.name
-              ? formik.errors.name
-              : "Name"}
-          </label>
-          <input
-            className={`w-full h-auto my-2 p-2 border-2 focus:outline-none ${
-              darkmode ? "border-white bg-black" : "border-blue-950 bg-white"
-            }`}
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          <label
-            className={`font-medium ${
-              formik.touched.email && formik.errors.email && `text-red-600`
-            }`}
-            htmlFor="email"
-          >
-            {formik.touched.email && formik.errors.email
-              ? formik.errors.email
-              : "Email"}
-          </label>
-          <input
-            className={`w-full h-auto my-2 p-2 border-2 focus:outline-none ${
-              darkmode ? "border-white bg-black" : "border-blue-950 bg-white"
-            }`}
-            type="text"
-            name="email"
-            placeholder="Email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          <label
-            className={`font-medium ${
-              formik.touched.message && formik.errors.message && `text-red-600`
-            }`}
-            htmlFor="message"
-          >
-            {formik.touched.message && formik.errors.message
-              ? formik.errors.message
-              : "Message"}
-          </label>
-          <textarea
-            rows={10}
-            className={`w-full h-auto my-2 p-2 border-2 focus:outline-none ${
-              darkmode ? "border-white bg-black" : "border-blue-950 bg-white"
-            }`}
-            name="message"
-            placeholder="Message"
-            value={formik.values.message}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          ></textarea>
+      <div
+        className={`flex flex-col items-center justify-center w-full p-4 lg:px-12 z-20`}
+      >
+        <form className="w-full" onSubmit={formik.handleSubmit}>
+          <div className="flex flex-col justify-center items-start w-full py-2">
+            <label
+              className={`font-medium ${
+                formik.touched.name && formik.errors.name && `text-red-600`
+              }`}
+              htmlFor="name"
+            >
+              {formik.touched.name && formik.errors.name
+                ? formik.errors.name
+                : "Name"}
+            </label>
+            <input
+              className={`w-full h-auto border-2 focus:outline-none p-2 rounded-md ${
+                darkMode ? `bg-newDark border-white` : `bg-white border-black`
+              }`}
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+          <div className="flex flex-col justify-center items-start w-full py-2">
+            <label
+              className={`font-medium ${
+                formik.touched.email && formik.errors.email && `text-red-600`
+              }`}
+              htmlFor="email"
+            >
+              {formik.touched.email && formik.errors.email
+                ? formik.errors.email
+                : "Email"}
+            </label>
+            <input
+              className={`w-full h-auto border-2 focus:outline-none p-2 rounded-md ${
+                darkMode ? `bg-newDark border-white` : `bg-white border-black`
+              }`}
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+          <div className="flex flex-col justify-center items-start w-full py-2">
+            <label
+              className={`font-medium ${
+                formik.touched.message &&
+                formik.errors.message &&
+                `text-red-600`
+              }`}
+              htmlFor="message"
+            >
+              {formik.touched.message && formik.errors.message
+                ? formik.errors.message
+                : "Message"}
+            </label>
+            <textarea
+              rows={10}
+              className={`w-full h-auto border-2 focus:outline-none p-2 rounded-md ${
+                darkMode ? `bg-newDark border-white` : `bg-white border-black`
+              }`}
+              name="message"
+              placeholder="Message"
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            ></textarea>
+          </div>
           <button
-            className={`w-full py-2 font-semibold border-2 bg-black text-white hover:text-black hover:bg-white duration-500 ${
-              darkmode ? "border-white" : "border-black hover:border-black"
-            }}`}
+            className={`font-bold duration-300 w-full h-auto border-2 focus:outline-none p-2 rounded-md ${
+              darkMode
+                ? `bg-newDark border-white hover:bg-white hover:text-black`
+                : `bg-white border-black hover:bg-black hover:text-white`
+            }`}
             type="submit"
           >
             SEND
@@ -133,4 +138,21 @@ export default function Contact({ darkMode }: ContactProps) {
       </div>
     </div>
   );
+}
+
+{
+  /* <div className={``}>
+           <a href="https://www.linkedin.com/in/satanshumishra/" target="_blank">
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className={`h-${iconSize} w-${iconSize} pr-2`}
+            />
+          </a>
+          <a href="https://github.com/SatanshuMishra" target="_blank">
+            <FontAwesomeIcon
+              icon={faGithubAlt}
+              className={`h-${iconSize} w-${iconSize} pr-2`}
+            />
+          </a>
+        </div> */
 }

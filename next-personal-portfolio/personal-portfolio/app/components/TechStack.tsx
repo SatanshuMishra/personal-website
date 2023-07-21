@@ -51,7 +51,7 @@ export default function TechStack({ darkMode }: TechStackProps) {
         drag="x"
         ref={carousel}
         dragConstraints={{ right: 0, left: -1643.29 }}
-        className="tech-stack w-full flex flex-nowrap px-[5rem] gap-8 py-8 z-20 overflow-x-visible"
+        className="tech-stack w-full flex flex-nowrap px-[2rem] md:px-[5rem] gap-8 py-8 z-20 overflow-x-visible md:overflow-x-scroll"
       >
         <TechContainer
           darkMode={darkMode}

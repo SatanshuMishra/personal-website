@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
-import { motion } from "framer-motion";
 
 // import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import portrait from "../assets/portrait_cropped.png";
