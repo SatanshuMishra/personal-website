@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         darkModeBackground: `#090909`,
         newDark: `#05080F`,
+        deep__blue: `#0E1528`,
       },
     },
   },

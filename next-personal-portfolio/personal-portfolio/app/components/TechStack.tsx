@@ -31,7 +31,7 @@ export default function TechStack({ darkMode }: TechStackProps) {
     <div
       className={`${
         darkMode ? "dark" : `light`
-      } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-60 overflow-hidden`}
+      } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:h-screen lg:pb-40 `}
     >
       <div className="max-w-5xl p-4 z-20 lg:pl-[4rem]">
         <h1 className="font-black text-6xl px-4 py-4">
@@ -70,8 +70,8 @@ export default function TechStack({ darkMode }: TechStackProps) {
         />
         <TechContainer
           darkMode={darkMode}
-          technologyCategory="OTHER TECHNOLOGIES"
-          technologyData={otherTechnologies}
+          technologyCategory="SERVERS"
+          technologyData={serverTechnologies}
         />
         <TechContainer
           darkMode={darkMode}
@@ -87,6 +87,11 @@ export default function TechStack({ darkMode }: TechStackProps) {
           darkMode={darkMode}
           technologyCategory="IDE"
           technologyData={IDE}
+        />
+        <TechContainer
+          darkMode={darkMode}
+          technologyCategory="OTHER TECHNOLOGIES"
+          technologyData={otherTechnologies}
         />
       </motion.div>
     </div>

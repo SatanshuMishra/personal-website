@@ -32,7 +32,7 @@ export default function Header({ darkMode }: HeaderProps) {
       id="home"
       className={`${
         darkmode ? "dark" : `light`
-      } flex flex-col items-center justify-center lg:pl-[4rem] lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-60 overflow-hidden`}
+      } flex flex-col items-center justify-center lg:pl-[4rem] lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40 lg:h-screen`}
     >
       {/* h-screen */}
       <div className="max-w-5xl p-4 z-20">

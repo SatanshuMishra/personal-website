@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -13,7 +14,13 @@ export default function TechContainer({
   technologyData,
 }: TechContainerProps) {
   return (
-    <div className="flex-auto max-w-md min-w-[25rem]">
+    <motion.div
+      whileHover={{ scale: 1.1, zIndex: 50 }}
+      onHoverStart={(e) => {}}
+      onHoverEnd={(e) => {}}
+      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+      className="flex-auto max-w-md min-w-[25rem]"
+    >
       <div className="relative group">
         <div
           className={`absolute -inset-1 bg-gradient-to-r ${
@@ -40,6 +47,6 @@ export default function TechContainer({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

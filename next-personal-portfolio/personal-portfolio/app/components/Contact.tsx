@@ -35,7 +35,7 @@ export default function Contact({ darkMode }: ContactProps) {
     <div
       className={`${
         darkMode ? `dark` : `light`
-      } flex flex-col lg:flex-row p-4 lg:px-8`}
+      } flex flex-col lg:flex-row p-4 lg:px-8 pt-[30%] md:pt-40 pb-20 md:w-full lg:h-screen lg:pb-40`}
     >
       <div
         className={`flex flex-col items-start justify-center p-4 lg:px-12 z-20`}
