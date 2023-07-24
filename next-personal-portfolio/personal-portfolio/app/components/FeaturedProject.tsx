@@ -30,7 +30,7 @@ function FeaturedProject({
   const [isHovering, setIsHovering] = useState(true);
 
   return (
-    <div className="my-12 w-full h-full">
+    <div className="my-16 w-full h-full">
       <div
         className={`relative w-full h-full flex flex-col justify-center ${
           alignmentRight ? `items-start` : `items-end`
@@ -39,7 +39,7 @@ function FeaturedProject({
         <Image
           className={`w-[60%] h-auto ${
             isHovering ? `` : `filter blur-[2px]`
-          } contrast-100 transition-all`}
+          } contrast-100 saturate-200 transition-all`}
           src={imageUrl}
           alt="screenshot"
         />
@@ -56,13 +56,22 @@ function FeaturedProject({
         >
           <h5 className="font-black text-lg text-blue-400">FEATURED PROJECT</h5>
           <h2 className="font-black text-5xl">{title}</h2>
-          <div className="my-5 bg-deep__blue text-white rounded-md md:max-w-2xl p-6 text-xl leading-relaxed font-normal">
+          <div
+            className={`my-5 ${
+              darkMode ? `bg-deep__blue` : `bg-light__mode__blue`
+            } text-white rounded-md md:max-w-2xl p-6 text-lg leading-relaxed font-normal`}
+          >
             {description}
           </div>
           <div className="flex justify-end flex-wrap">
             {technologies.map((technology, _) => {
               return (
-                <p key={_} className="text-xl mx-3 text-gray-300">
+                <p
+                  key={_}
+                  className={`text-lg mx-3 ${
+                    darkMode ? `text-gray-300` : `text-gray-800`
+                  }`}
+                >
                   {technology}
                 </p>
               );

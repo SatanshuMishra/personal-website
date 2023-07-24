@@ -46,10 +46,24 @@ export default function Contact({ darkMode }: ContactProps) {
         </h1>
         <p className={`font-light text-xl lg:text-2xl leading-8 `}>
           Have any questions? Want to collaberate on a project? Or just want to
-          talk? Shoot me a message 🙂
+          talk? Shoot me a email 🙂
         </p>
+        <a
+          className="my-10 no-underline"
+          href="mailto:satanshumishra@outlook.com?subject=Get In Touch | <REPLACE WITH SUBJECT>"
+        >
+          <button
+            className={`text-base lg:text-lg px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
+              darkMode
+                ? "border-white bg-transparent hover:border-white hover:bg-white hover:text-black"
+                : "border-newDark bg-newDark text-white hover:border-newDark hover:bg-white hover:text-black"
+            }`}
+          >
+            Send Email
+          </button>
+        </a>
       </div>
-      <div
+      {/* <div
         className={`flex flex-col items-center justify-center w-full p-4 lg:px-12 z-20`}
       >
         <form className="w-full" onSubmit={formik.handleSubmit}>
@@ -135,24 +149,7 @@ export default function Contact({ darkMode }: ContactProps) {
             SEND
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
-}
-
-{
-  /* <div className={``}>
-           <a href="https://www.linkedin.com/in/satanshumishra/" target="_blank">
-            <FontAwesomeIcon
-              icon={faLinkedinIn}
-              className={`h-${iconSize} w-${iconSize} pr-2`}
-            />
-          </a>
-          <a href="https://github.com/SatanshuMishra" target="_blank">
-            <FontAwesomeIcon
-              icon={faGithubAlt}
-              className={`h-${iconSize} w-${iconSize} pr-2`}
-            />
-          </a>
-        </div> */
 }

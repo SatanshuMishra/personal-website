@@ -25,7 +25,7 @@ export default function Spotlight({ darkMode }: SpotlightProps) {
       id="spotlight"
       className={`${
         darkMode ? `spotlight-dark` : `spotlight-light`
-      } fixed w-[1000px] h-[1000px] rounded-full z-10`}
+      } fixed w-[1000px] h-[1000px] rounded-full z-0`}
     ></div>
   );
 }

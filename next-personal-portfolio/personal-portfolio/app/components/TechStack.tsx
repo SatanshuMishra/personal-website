@@ -20,39 +20,28 @@ type TechStackProps = {
 };
 
 export default function TechStack({ darkMode }: TechStackProps) {
-  const [carouselWidth, setCarouselWidth] = useState(0);
-  const carousel = useRef(null);
-
-  useEffect(() => {
-    console.log(carousel.current);
-  }, []);
-
   return (
     <div
       className={`${
         darkMode ? "dark" : `light`
-      } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:h-screen lg:pb-40 `}
+      } flex flex-row items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40 `}
     >
-      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem]">
+      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] sticky top-32">
         <h1 className="font-black text-6xl px-4 py-4">
-          DESIGN.
+          {/* DESIGN.
           <br />
           DEVELOP.
           <br />
-          TEST.
+          TEST. */}
+          FROM <br /> PIXELS TO <br /> PRODUCTS
         </h1>
         <p className="font-light text-2xl leading-1 p-4">
           Building a good digital experience requires an even better tool-set of
-          technologies. These are some of the technologies I have worked with
-          recently.
+          technologies. These are some of the technologies I have worked with.
+          {/* recently. */}
         </p>
       </div>
-      <motion.div
-        drag="x"
-        ref={carousel}
-        dragConstraints={{ right: 0, left: -1643.29 }}
-        className="tech-stack w-full flex flex-nowrap px-[2rem] md:px-[5rem] gap-8 py-8 z-20 overflow-x-visible md:overflow-x-scroll"
-      >
+      <div className="tech-stack w-full h-auto flex flex-col flex-nowrap px-[2rem] md:px-[5rem] gap-8 py-8 z-20 overflow-visible overflow-y-scroll">
         <TechContainer
           darkMode={darkMode}
           technologyCategory="FRONT-END DEVELOPMENT"
@@ -93,7 +82,7 @@ export default function TechStack({ darkMode }: TechStackProps) {
           technologyCategory="OTHER TECHNOLOGIES"
           technologyData={otherTechnologies}
         />
-      </motion.div>
+      </div>
     </div>
   );
 }

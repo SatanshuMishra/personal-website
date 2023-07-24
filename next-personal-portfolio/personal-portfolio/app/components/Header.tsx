@@ -62,7 +62,7 @@ export default function Header({ darkMode }: HeaderProps) {
             className={`text-base lg:text-lg px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
               darkmode
                 ? "border-white bg-transparent hover:border-white hover:bg-white hover:text-black"
-                : "border-darkModeBackground bg-newDark text-white hover:border-darkModeBackground hover:bg-white hover:text-black"
+                : "border-newDark bg-newDark text-white hover:border-newDark hover:bg-white hover:text-black"
             }`}
           >
             View Resume

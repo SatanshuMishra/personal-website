@@ -13,7 +13,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
         darkMode ? "dark" : `light`
       } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40`}
     >
-      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem]">
+      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] my-[25rem] sticky top-[30%]">
         <h1 className="font-black text-6xl px-4 py-4">
           SOME THINGS <br /> I&apos;VE BUILT
         </h1>

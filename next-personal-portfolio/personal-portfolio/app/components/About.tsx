@@ -8,26 +8,31 @@ export default function About({ darkMode }: AboutProps) {
   const darkmode = darkMode;
   return (
     <div
-      id="about"
       className={`${
-        darkmode ? "dark" : `light bg-white`
-      } flex flex-wrap items-center justify-center pt-40 pb-20 lg:pb-60`}
+        darkMode ? "dark" : `light`
+      } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40 `}
     >
-      {/* <img src={aboutGif} className="max-w-lg hidden lg:block" /> */}
-      <div className="max-w-4xl p-4 z-20">
-        <h1
-          className={`font-black text-xl px-4 py-2 my-4 w-fit ${
-            darkmode ? `bg-blue-600 text-white` : `  bg-black text-white`
-          }`}
-        >
-          ABOUT ME
+      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] sticky top-32">
+        <h1 className="font-black text-6xl px-4 py-4">
+          FUSING TECH AND <br /> PASION
         </h1>
-        <p className="text-xl leading-loose my-4">
-          I&apos;m a full stack developer who has been building industry
-          utilized applications since my senior year in highschool. Since then,
-          I&apos;ve graduated and pursured a higher-education in the field of
-          Computer Science while competing in Hackathons and furthering my
-          skills through Udemy courses.
+        <p className="font-light text-2xl leading-1 p-4">
+          Hello again! My journey into software development began in 2018 when I
+          volunteered to build a gaming community website. As I pieced together
+          buttons, images, and text with HTML & CSS, I discovered my passion for
+          coding. Since then, I&apos;ve had the privilege of working on diverse
+          projects, from desktop and mobile applications to modern responsive
+          websites, constantly fueling my enthusiasm for the digital realm.
+          <br />
+          <br /> With every line of code I write, I feel the thrill of crafting
+          something tangible in the virtual world. The joy of seeing my
+          creations come to life and the endless possibilities of technology
+          keep me inspired.
+          <br />
+          <br />
+          Fast-forward to today, I am always eagerly seeking new challenges,
+          collaborative opportunities, and ways to make a meaningful impact in
+          the software development domain.
         </p>
       </div>
     </div>
