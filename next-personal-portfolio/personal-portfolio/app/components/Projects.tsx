@@ -11,9 +11,9 @@ export default function Projects({ darkMode }: ProjectsProps) {
     <div
       className={`${
         darkMode ? "dark" : `light`
-      } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40`}
+      } flex flex-col items-start justify-center pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40`}
     >
-      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] my-[20rem] sticky top-20">
+      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] lg:my-[15rem] lg:sticky lg:top-20">
         <h1 className="font-black text-5xl lg:text-6xl px-4 py-4">
           SOME THINGS <br /> I&apos;VE BUILT
         </h1>
@@ -21,7 +21,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
           Here’s is a sampling of some of the things I have built.
         </p>
       </div>
-      <div className="tech-stack w-full flex flex-col flex-nowrap px-[2rem] md:px-[5rem] py-8 z-20">
+      <div className="tech-stack w-full flex flex-col flex-nowrap px-[2rem] lg:px-[5rem] py-8 z-20">
         <FeaturedProject
           darkMode={darkMode}
           alignmentRight={true}

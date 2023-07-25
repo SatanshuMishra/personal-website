@@ -16,6 +16,7 @@ module.exports = {
         newDark: `#05080F`,
         deep__blue: `#0E1528`,
         light__mode__blue: `#0e161f`,
+        technology__bubble: `#4287f5`,
       },
     },
   },

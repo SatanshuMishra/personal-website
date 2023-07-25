@@ -53,7 +53,7 @@ export default function Contact({ darkMode }: ContactProps) {
           href="mailto:satanshumishra@outlook.com?subject=Get In Touch | <REPLACE WITH SUBJECT>"
         >
           <button
-            className={`text-base lg:text-lg px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
+            className={`text-xl px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
               darkMode
                 ? "border-white bg-transparent hover:border-white hover:bg-white hover:text-black"
                 : "border-newDark bg-newDark text-white hover:border-newDark hover:bg-white hover:text-black"
