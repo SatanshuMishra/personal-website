@@ -14,7 +14,13 @@ type NavigationProps = {
 export default function Navigation({ darkMode, setMode }: NavigationProps) {
   const [isScrollDown, setIsScrollDown] = useState(false);
 
-  const scrollDir = useDetectScroll({});
+  const scrollDir = useDetectScroll({
+    thr: 0,
+    axis: Axis.Y,
+    scrollUp: Direction.Up,
+    scrollDown: Direction.Down,
+    still: Direction.Still,
+  });
 
   useEffect(() => {
     if (scrollDir === "down") {
