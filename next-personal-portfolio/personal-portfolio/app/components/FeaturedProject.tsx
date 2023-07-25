@@ -31,19 +31,22 @@ function FeaturedProject({
 
   return (
     <>
+      {/* LARGE VIEWPORT */}
       <div className="hidden lg:inline-block my-16 w-full h-full">
         <div
           className={`relative w-full h-full flex flex-col justify-center ${
             alignmentRight ? `lg:items-start` : `lg:items-end`
           } items-center`}
         >
-          <Image
-            className={`w-[100%] my-10 lg:my-0 lg:w-[60%] h-auto ${
-              isHovering ? `` : `lg:filter lg:blur-[2px]`
-            } contrast-100 saturate-200 transition-all`}
-            src={imageUrl}
-            alt="screenshot"
-          />
+          <div className="bg-blue-900 w-[100%] my-10 lg:my-0 lg:w-[60%] h-auto duration-500 transition-all">
+            <Image
+              className={` ${
+                isHovering ? `` : ` opacity-30 `
+              } contrast-100 saturate-200 transition-all`}
+              src={imageUrl}
+              alt="screenshot"
+            />
+          </div>
           <motion.div
             onHoverStart={(e) => {
               setIsHovering(true);
@@ -82,7 +85,11 @@ function FeaturedProject({
                 );
               })}
             </div>
-            <div className="w-full flex justify-center text-3xl">
+            <div
+              className={`w-full flex ${
+                alignmentRight ? "justify-end" : "justify-start"
+              } text-3xl`}
+            >
               <a href={`${github}`}>
                 <FontAwesomeIcon
                   className="py-4 px-2 cursor-pointer hover:text-cyan-400"
@@ -101,6 +108,8 @@ function FeaturedProject({
           </motion.div>
         </div>
       </div>
+
+      {/* SMALL VIEWPORT */}
       <div className="lg:hidden relative small-viewport-project my-5 w-full h-fit flex flex-col justify-center items-center overflow-hidden border-2 border-blue-600">
         <Image
           className={` w-full h-[650px] xs:h-[540px] sm:h-[480px] object-cover scale-110 filter blur-[3px] opacity-40`}

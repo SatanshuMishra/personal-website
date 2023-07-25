@@ -14,7 +14,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
     offset: ["start end", "end end"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0.6, 0.68], [1, 0]);
 
   return (
     <div

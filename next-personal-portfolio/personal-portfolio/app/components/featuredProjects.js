@@ -1,8 +1,9 @@
 import p1S from "../assets/project-screenshots/discussIt.png";
 import p3S from "../assets/project-screenshots/personalPortfolio.png";
+import p1SN from "../assets/project-screenshots/discussIt-Poster.png";
 
 export const projectOne = {
-  imageUrl: p1S,
+  imageUrl: p1SN,
   title: "discussIt",
   description:
     "An unique take on a discussion website combining features from both social-media applications and forum based websites. Start or join discussions focused on specific themes, or just explore the most popular discussions, and more.",

@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import styled, { keyframes } from "styled-components";
-
-// import { slideInRight, slideOutRight } from "react-animations";
-// import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
+import useDetectScroll, {
+  Axis,
+  Direction,
+} from "@smakss/react-scroll-direction";
 
 type NavigationProps = {
   darkMode: boolean;
@@ -12,6 +12,18 @@ type NavigationProps = {
 };
 
 export default function Navigation({ darkMode, setMode }: NavigationProps) {
+  const [isScrollDown, setIsScrollDown] = useState(false);
+
+  const scrollDir = useDetectScroll({});
+
+  useEffect(() => {
+    if (scrollDir === "down") {
+      setIsScrollDown(true);
+    } else if (scrollDir === "up") {
+      setIsScrollDown(false);
+    }
+  }, [scrollDir]);
+
   const options = [`About`, `Projects`, `Contact`];
 
   const [darkmode, setDarkMode] = useState(darkMode);
@@ -62,7 +74,7 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
   };
 
   return (
-    <div>
+    <div className={`${isScrollDown ? `hidden` : `inline`}`}>
       <div
         className={`${
           darkmode
