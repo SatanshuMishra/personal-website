@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import FeaturedProject from "./FeaturedProject";
 import { projectOne, projectTwo, projectThree } from "./featuredProjects";
-import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectsProps = {
   darkMode: boolean;
@@ -14,10 +13,6 @@ export default function Projects({ darkMode }: ProjectsProps) {
     target: ref,
     offset: ["start end", "end end"],
   });
-
-  useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
 
   const opacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
 
