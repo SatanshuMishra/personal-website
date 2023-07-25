@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import useDetectScroll, {
-  Axis,
-  Direction,
-} from "@smakss/react-scroll-direction";
+// import useDetectScroll, {
+//   Axis,
+//   Direction,
+// } from "@smakss/react-scroll-direction";
 
 type NavigationProps = {
   darkMode: boolean;
@@ -12,23 +12,23 @@ type NavigationProps = {
 };
 
 export default function Navigation({ darkMode, setMode }: NavigationProps) {
-  const [isScrollDown, setIsScrollDown] = useState(false);
+  // const [isScrollDown, setIsScrollDown] = useState(false);
 
-  const scrollDir = useDetectScroll({
-    thr: 0,
-    axis: Axis.Y,
-    scrollUp: Direction.Up,
-    scrollDown: Direction.Down,
-    still: Direction.Still,
-  });
+  // const scrollDir = useDetectScroll({
+  //   thr: 0,
+  //   axis: Axis.Y,
+  //   scrollUp: Direction.Up,
+  //   scrollDown: Direction.Down,
+  //   still: Direction.Still,
+  // });
 
-  useEffect(() => {
-    if (scrollDir === "down") {
-      setIsScrollDown(true);
-    } else if (scrollDir === "up") {
-      setIsScrollDown(false);
-    }
-  }, [scrollDir]);
+  // useEffect(() => {
+  //   if (scrollDir === "down") {
+  //     setIsScrollDown(true);
+  //   } else if (scrollDir === "up") {
+  //     setIsScrollDown(false);
+  //   }
+  // }, [scrollDir]);
 
   const options = [`About`, `Projects`, `Contact`];
 
@@ -70,17 +70,13 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
     setShowNav(!showNav);
   };
 
-  // const SlideInLeft = styled.div`
-  //   animation: 0.5s ${keyframes`${slideInRight}`};
-  // `;
-
   const onToggle = () => {
     setDarkMode(!darkmode);
     setMode(darkmode);
   };
-
+  // {`${isScrollDown ? `hidden` : `inline`}`}
   return (
-    <div className={`${isScrollDown ? `hidden` : `inline`}`}>
+    <div>
       <div
         className={`${
           darkmode
