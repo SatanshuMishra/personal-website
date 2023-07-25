@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import FeaturedProject from "./FeaturedProject";
 import { projectOne, projectTwo, projectThree } from "./featuredProjects";
+import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 type ProjectsProps = {
   darkMode: boolean;
 };
 
 export default function Projects({ darkMode }: ProjectsProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+
+  useEffect(() => {
+    console.log(scrollYProgress);
+  }, [scrollYProgress]);
+
+  const opacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
+
   return (
     <div
+      ref={ref}
       className={`${
         darkMode ? "dark" : `light`
       } flex flex-col items-start justify-center pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40`}
     >
-      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] lg:my-[15rem] lg:sticky lg:top-20">
+      <motion.div
+        style={{ opacity: opacity }}
+        className="max-w-5xl p-4 z-20 lg:pl-[4rem] lg:my-[15rem] lg:sticky lg:top-20"
+      >
         <h1 className="font-black text-5xl lg:text-6xl px-4 py-4">
           SOME THINGS <br /> I&apos;VE BUILT
         </h1>
         <p className="font-light text-2xl lg:text-3xl leading-1 p-4">
           Here’s is a sampling of some of the things I have built.
         </p>
-      </div>
+      </motion.div>
       <div className="tech-stack w-full flex flex-col flex-nowrap px-[2rem] lg:px-[5rem] py-8 z-20">
         <FeaturedProject
           darkMode={darkMode}

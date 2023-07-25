@@ -32,7 +32,7 @@ export default function TechContainer({
             darkMode ? `bg-newDark` : `bg-white`
           } rounded-lg flex flex-col justify-start`}
         >
-          <h4 className="text-base font-bold py-1">{technologyCategory}</h4>
+          <h4 className="text-xl font-bold py-1">{technologyCategory}</h4>
           <div className="flex flex-row justify-start flex-wrap py-1">
             {technologyData.map((tech, _) => {
               return (

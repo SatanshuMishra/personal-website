@@ -7,6 +7,7 @@ import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 // import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import portrait from "../assets/portrait_cropped.png";
+import Reveal from "./animationComponents/Reveal";
 
 type HeaderProps = {
   darkMode: boolean;
@@ -37,9 +38,12 @@ export default function Header({ darkMode }: HeaderProps) {
       {/* h-screen */}
       <div className="max-w-5xl p-4 z-20">
         {/* -translate-y-20 */}
+        {/* <Reveal> */}
         <h1 className="font-black text-5xl lg:text-6xl px-4 py-4">
           Full Stack Software <br /> Developer 👋
         </h1>
+        {/* </Reveal> */}
+        {/* <Reveal> */}
         <div className="px-4 flex flex-row justify-start items-center">
           <FontAwesomeIcon
             icon={faQuoteLeft}
@@ -49,17 +53,21 @@ export default function Header({ darkMode }: HeaderProps) {
             The future is what we make it. So make it a good one.
           </h3>
         </div>
-        <p className="font-light text-xl lg:text-2xl leading-1 p-4">
+        {/* </Reveal> */}
+        {/* <Reveal> */}
+        <p className="font-light text-2xl lg:text-3xl leading-1 p-4">
           Programming is not a hobby, it&apos;s a dream. I create clean, and
           accessible solutions for complex modern-day challenges.
         </p>
+        {/* </Reveal> */}
+        {/* <Reveal> */}
         <a
           className="px-4 no-underline"
           href="https://drive.google.com/file/d/1c4uMZIbuM26bXfpeh9_IyBSeXmDe0mm7/view?usp=sharing"
           target="_blank"
         >
           <button
-            className={`text-base lg:text-lg px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
+            className={`text-xl px-4 py-2 border-2 font-bold rounded-lg cursor-pointer duration-300 hover:duration-300 ${
               darkmode
                 ? "border-white bg-transparent hover:border-white hover:bg-white hover:text-black"
                 : "border-newDark bg-newDark text-white hover:border-newDark hover:bg-white hover:text-black"
@@ -68,6 +76,8 @@ export default function Header({ darkMode }: HeaderProps) {
             View Resume
           </button>
         </a>
+        {/* </Reveal> */}
+        {/* <Reveal> */}
         <div className="flex flex-row p-4">
           <a href="https://www.linkedin.com/in/satanshumishra/" target="_blank">
             <FontAwesomeIcon
@@ -90,6 +100,7 @@ export default function Header({ darkMode }: HeaderProps) {
             />
           </a>
         </div>
+        {/* </Reveal> */}
       </div>
     </div>
   );

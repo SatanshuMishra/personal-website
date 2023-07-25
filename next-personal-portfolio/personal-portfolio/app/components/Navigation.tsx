@@ -70,8 +70,8 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
             : `light ${showNavBg ? `bg-white` : ``}`
         } w-screen bg-opacity-90 fixed top-0 z-40`}
       >
-        <div className="flex flex-row justify-between items-center px-4 py-2 text-lg">
-          <h1 className="font-bold text-lg">
+        <div className="flex flex-row justify-between items-center px-4 py-2 text-xl">
+          <h1 className="font-bold text-xl">
             {width ? "Satanshu.Mishra" : "S.M"}
           </h1>
           <ul className="flex flex-row justify-end items-center">
