@@ -103,7 +103,7 @@ function FeaturedProject({
       </div>
       <div className="lg:hidden relative small-viewport-project my-5 w-full h-fit flex flex-col justify-center items-center overflow-hidden border-2 border-blue-600">
         <Image
-          className={` w-full h-[500px] object-cover scale-110 filter blur-[3px] opacity-40`}
+          className={` w-full h-[650px] xs:h-[540px] sm:h-[480px] object-cover scale-110 filter blur-[3px] opacity-40`}
           src={imageUrl}
           alt="screenshot"
         />

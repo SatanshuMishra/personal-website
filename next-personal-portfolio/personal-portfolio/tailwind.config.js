@@ -18,6 +18,9 @@ module.exports = {
         light__mode__blue: `#0e161f`,
         technology__bubble: `#4287f5`,
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [],

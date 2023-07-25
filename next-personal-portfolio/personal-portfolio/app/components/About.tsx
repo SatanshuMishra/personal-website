@@ -26,7 +26,7 @@ export default function About({ darkMode }: AboutProps) {
           <br />
           <br /> With every line of code I write, I feel the thrill of crafting
           something tangible in the virtual world. The joy of seeing my
-          creations come to life and the endless possibilities of technology
+          creations coming to life and the endless possibilities of technology
           keep me inspired.
           <br />
           <br />
