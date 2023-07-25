@@ -19,7 +19,7 @@ export default function TechContainer({
       onHoverStart={(e) => {}}
       onHoverEnd={(e) => {}}
       transition={{ type: "spring", stiffness: 200, damping: 10 }}
-      className="flex-auto max-w-md min-w-[25rem]"
+      className="flex-auto h-auto lg:max-w-lg sm:min-w-[25rem]"
     >
       <div className="relative group">
         <div
@@ -38,7 +38,7 @@ export default function TechContainer({
               return (
                 <Image
                   key={_}
-                  className="p-1 rounded-md pointer-events-none"
+                  className="p-1 rounded-md pointer-events-none h-10 w-auto"
                   src={tech}
                   alt="_"
                 />
