@@ -13,11 +13,11 @@ export default function Projects({ darkMode }: ProjectsProps) {
         darkMode ? "dark" : `light`
       } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40`}
     >
-      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] my-[25rem] sticky top-[30%]">
-        <h1 className="font-black text-6xl px-4 py-4">
+      <div className="max-w-5xl p-4 z-20 lg:pl-[4rem] my-[20rem] sticky top-20">
+        <h1 className="font-black text-5xl lg:text-6xl px-4 py-4">
           SOME THINGS <br /> I&apos;VE BUILT
         </h1>
-        <p className="font-light text-2xl leading-1 p-4">
+        <p className="font-light text-2xl lg:text-3xl leading-1 p-4">
           Here’s is a sampling of some of the things I have built.
         </p>
       </div>

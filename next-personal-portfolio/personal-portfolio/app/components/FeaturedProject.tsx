@@ -33,12 +33,12 @@ function FeaturedProject({
     <div className="my-16 w-full h-full">
       <div
         className={`relative w-full h-full flex flex-col justify-center ${
-          alignmentRight ? `items-start` : `items-end`
-        }`}
+          alignmentRight ? `lg:items-start` : `lg:items-end`
+        } items-center`}
       >
         <Image
-          className={`w-[60%] h-auto ${
-            isHovering ? `` : `filter blur-[2px]`
+          className={`w-[85%] my-10 lg:my-0 lg:w-[60%] h-auto ${
+            isHovering ? `` : `lg:filter lg:blur-[2px]`
           } contrast-100 saturate-200 transition-all`}
           src={imageUrl}
           alt="screenshot"
@@ -50,12 +50,14 @@ function FeaturedProject({
           onHoverEnd={(e) => {
             setIsHovering(false);
           }}
-          className={`h-full absolute inset-0 flex flex-col justify-center ${
+          className={`h-full md:top-[50%] lg:top-0 md:absolute inset-0 flex flex-col justify-center ${
             alignmentRight ? `items-end` : `items-start`
           } z-10`}
         >
           <h5 className="font-black text-lg text-blue-400">FEATURED PROJECT</h5>
-          <h2 className="font-black text-5xl">{title}</h2>
+          <h2 className={`font-black text-5xl ${darkMode ? "" : ""}`}>
+            {title}
+          </h2>
           <div
             className={`my-5 ${
               darkMode ? `bg-deep__blue` : `bg-light__mode__blue`

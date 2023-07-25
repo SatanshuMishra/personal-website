@@ -40,11 +40,11 @@ export default function Contact({ darkMode }: ContactProps) {
       <div
         className={`flex flex-col items-start justify-center p-4 lg:px-12 z-20`}
       >
-        <h1 className={`font-black text-6xl py-4`}>
+        <h1 className={`font-black text-5xl lg:text-6xl py-4`}>
           Get in Touch
           <span className={`text-7xl hidden md:inline-block`}>📡</span>
         </h1>
-        <p className={`font-light text-xl lg:text-2xl leading-8 `}>
+        <p className={`font-light text-2xl lg:text-3xl leading-8 `}>
           Have any questions? Want to collaberate on a project? Or just want to
           talk? Shoot me a email 🙂
         </p>
