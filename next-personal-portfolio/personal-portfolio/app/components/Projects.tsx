@@ -18,6 +18,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
 
   return (
     <div
+      id="projects"
       ref={ref}
       className={`${
         darkMode ? "dark" : `light`

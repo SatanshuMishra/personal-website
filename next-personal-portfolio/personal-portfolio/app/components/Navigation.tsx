@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 // import useDetectScroll, {
 //   Axis,
@@ -74,7 +75,6 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
     setDarkMode(!darkmode);
     setMode(darkmode);
   };
-  // {`${isScrollDown ? `hidden` : `inline`}`}
   return (
     <div>
       <div
@@ -111,6 +111,7 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
                           : `hover:border-b-black`
                       } duration-300 cursor-pointer no-underline`}
                     >
+                      <Link href={`#${option.toLowerCase()}`} scroll={false} />
                       <a href={`#${option.toLowerCase()}`}>{option}</a>
                     </li>
                   );

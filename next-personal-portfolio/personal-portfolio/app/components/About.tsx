@@ -9,6 +9,7 @@ export default function About({ darkMode }: AboutProps) {
   const darkmode = darkMode;
   return (
     <div
+      id="about"
       className={`${
         darkMode ? "dark" : `light`
       } flex flex-col items-center justify-center lg:items-start pt-[30%] md:pt-40 pb-20 md:w-full lg:pb-40 `}

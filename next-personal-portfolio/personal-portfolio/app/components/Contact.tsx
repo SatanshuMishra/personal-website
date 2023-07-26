@@ -33,6 +33,7 @@ export default function Contact({ darkMode }: ContactProps) {
 
   return (
     <div
+      id="contact"
       className={`${
         darkMode ? `dark` : `light`
       } flex flex-col lg:flex-row p-4 lg:px-8 pt-[30%] md:pt-40 pb-20 md:w-full lg:h-screen lg:pb-40`}
