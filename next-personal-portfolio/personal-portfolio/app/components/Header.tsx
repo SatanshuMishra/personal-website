@@ -63,7 +63,7 @@ export default function Header({ darkMode }: HeaderProps) {
         {/* <Reveal> */}
         <a
           className="px-4 no-underline"
-          href="https://drive.google.com/file/d/1c4uMZIbuM26bXfpeh9_IyBSeXmDe0mm7/view?usp=sharing"
+          href="https://www.dropbox.com/s/4t4l0lwhfp4rivs/Resume__Satanshu.pdf?dl=0"
           target="_blank"
         >
           <button
