@@ -20,10 +20,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #05080f;
-}
-
 body::-webkit-scrollbar {
   display: none;
 }
