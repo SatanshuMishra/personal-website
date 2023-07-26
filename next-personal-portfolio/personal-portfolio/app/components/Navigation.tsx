@@ -85,8 +85,8 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
         } w-screen bg-opacity-90 fixed top-0 z-40`}
       >
         <div className="flex flex-row justify-between items-center px-4 py-2 text-xl">
-          <h1 className="font-bold text-xl">
-            {width ? "Satanshu.Mishra" : "S.M"}
+          <h1 className="font-bold text-xl no-underline">
+            <a href="#home">{width ? "Satanshu.Mishra" : "S.M"}</a>
           </h1>
           <ul className="flex flex-row justify-end items-center">
             {width ? (
@@ -111,7 +111,6 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
                           : `hover:border-b-black`
                       } duration-300 cursor-pointer no-underline`}
                     >
-                      <Link href={`#${option.toLowerCase()}`} scroll={false} />
                       <a href={`#${option.toLowerCase()}`}>{option}</a>
                     </li>
                   );
