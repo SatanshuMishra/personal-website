@@ -97,7 +97,7 @@ function FeaturedProject({
                 />
               </a>
               {link && (
-                <a href="">
+                <a href={`${link}`}>
                   <FontAwesomeIcon
                     className="py-4 px-2 cursor-pointer hover:text-cyan-400"
                     icon={faUpRightFromSquare}
@@ -158,7 +158,7 @@ function FeaturedProject({
               />
             </a>
             {link && (
-              <a href="">
+              <a href={`${link}`}>
                 <FontAwesomeIcon
                   className="py-4 px-2 cursor-pointer hover:text-cyan-400"
                   icon={faUpRightFromSquare}
