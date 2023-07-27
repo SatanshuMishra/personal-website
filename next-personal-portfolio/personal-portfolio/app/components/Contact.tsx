@@ -46,8 +46,8 @@ export default function Contact({ darkMode }: ContactProps) {
           <span className={`text-7xl hidden md:inline-block`}>📡</span>
         </h1>
         <p className={`font-light text-2xl lg:text-3xl leading-8 `}>
-          Have any questions? Want to collaberate on a project? Or just want to
-          talk? Shoot me a email 🙂
+          Have any questions? Want to collaborate on a project? Or just want to
+          talk? <span className="font-black"> Lets Talk!</span> 🙂
         </p>
         <a
           className="my-10 no-underline"
