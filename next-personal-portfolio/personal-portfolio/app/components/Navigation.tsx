@@ -179,7 +179,7 @@ export default function Navigation({ darkMode, setMode }: NavigationProps) {
 							{scroll && (
 								<a
 									className="mx-4 px-4 no-underline flex flex-col justify-center"
-									href="https://www.dropbox.com/s/4t4l0lwhfp4rivs/Resume__Satanshu.pdf?dl=0"
+									href="https://drive.google.com/file/d/1qJ04RPb2j0wSLTIFT-45S6vt3lj4rPMc/view?usp=sharing"
 									target="_blank"
 								>
 									<button className="my-4 py-0.5 border-2 border-white bg-transparent text-white font-bold text-2xl cursor-pointer hover:bg-white hover:text-black">
